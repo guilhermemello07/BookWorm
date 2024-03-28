@@ -40,7 +40,7 @@ struct AddBookView: View {
                 
                 Section {
                     Button {
-                        let newBook = Book(title: title, author: author, genre: genre, review: review, rating: rating)
+                        let newBook = Book(title: title, author: author, genre: genre, review: review, rating: rating, date: .now)
                         modelContext.insert(newBook)
                         dismiss()
                     } label: {
